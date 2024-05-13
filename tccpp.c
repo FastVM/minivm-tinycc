@@ -3547,7 +3547,7 @@ static void putdefs(CString *cs, const char *p)
 
 static void tcc_predefs(TCCState *s1, CString *cs, int is_asm)
 {
-    cstr_printf(cs, "#define __TINYC__ 9%.2s\n", TCC_VERSION + 4);
+    cstr_printf(cs, "#define __TINYC__ 9%.2s\n", &(TCC_VERSION)[4]);
     putdefs(cs, target_machine_defs);
     putdefs(cs, target_os_defs);
 
